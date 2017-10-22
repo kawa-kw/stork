@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% if page.title %}{{ page.title }} - {% endif %}Stork Wood Work</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:100,300,700&amp;subset=latin-ext">
+	<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+	<!-- <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}img/favicon-32x32.png"> -->
+	<link rel="stylesheet" href="{{ site.baseurl }}css/base.css">
+</head>
+
+<body>
+	<nav class="main-nav">
+		hello navigation
+	</nav>
+
+	{{ content }}
+
+	<footer class="main-footer">
+		hello footer
+	</footer>
+
+	<script type="text/javascript" src="{{ site.baseurl }}js/main.js"></script>
+</body>
+</html>
