@@ -1,0 +1,117 @@
+=btn($color, $icon: null, $font-size: 12px, $icon-right: null)
+	position: relative
+	display: block
+	max-width: 300px
+	padding: 10px 20px
+	border-radius: $font-size + 20px
+	background-color: $color
+	color: $color-white
+	text:
+		shadow: none
+		align: center
+	font:
+		size: $font-size
+		weight: 700
+	transition: all .2s ease
+
+	&:hover
+		color: $color-white
+		background-color: darken($color, 6%)
+
+	@if $icon
+		@if $icon-right
+			padding: 10px 50px 10px 20px
+
+			&::after
+				+fa-icon($icon, $font-size)
+				position: absolute
+				top: 0
+				right: 0
+				bottom: 0
+				width: $font-size + 26px
+				height: $font-size + 26px
+				border-radius: 100%
+				line-height: $font-size + 26px
+				text-align: center
+				background-color: darken($color, 10%)
+
+		@else
+			padding: 10px 20px 10px 50px
+
+			&::before
+				+fa-icon($icon, $font-size)
+				position: absolute
+				top: 0
+				left: 0
+				bottom: 0
+				width: $font-size + 26px
+				height: $font-size + 26px
+				border-radius: 100%
+				line-height: $font-size + 26px
+				text-align: center
+				background-color: darken($color, 10%)
+
+// button icon-only
+=btn-icon-only($color, $icon: $icon-variable, $font-size: 12px)
+	position: relative
+	display: block
+	width: $font-size + 26px
+	height: $font-size + 26px
+	border-radius: 100%
+	margin: 10px auto
+	background-color: $color
+	color: $color-white
+	text:
+		shadow: none
+		align: center
+	font:
+		size: $font-size
+		weight: 700
+	text-align: center
+	transition: all .2s ease
+
+	&:hover
+		color: $color-white
+		background-color: darken($color, 6%)
+
+	&::after
+		+fa-icon($icon, $font-size)
+
+// button disabled
+=btn-disabled
+	pointer-events: none
+	background-color: $color-disabled
+
+	&:hover
+		background-color: $color-disabled
+
+	&::before,
+	&::after
+		background-color: darken($color-disabled, 10%)
+
+// mobile tap effect
+=btn-tap
+	position: relative
+	overflow: hidden
+
+	&::after
+		content: ''
+		position: absolute
+		top: 50%
+		left: 50%
+		width: 10px
+		height: 10px
+		border-radius: 100%
+		transform: translate(-50%, -50%)
+		transition: all .4s ease
+		background-color: $color-gray-light
+		opacity: 0
+
+	&:active,
+	&:focus
+		&::after
+			width: 200%
+			height: 2000%
+			opacity: .2
+			transform: translate(-50%, -50%)
+			transform-origin: center center

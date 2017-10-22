@@ -1,0 +1,30 @@
+// colors
+$color-bcg-violet: #251263
+$color-bcg-grey: #fbfbfb
+$color-bcg-splash: #dad6df
+$color-fallback-accent: #008000
+$color-icon: #fbfbfb
+$color-grey: #9a9a9a
+$color-grey-text: darken(#9a9a9a, 20%)
+$color-grey-text-lite: lighten($color-grey-text, 42%)
+$color-violet: lighten($color-bcg-violet, 10%)
+$color-violet-dark: darken($color-bcg-violet, 10%)
+$color-violet-icon: #432969
+$color-violet-text: $color-violet-icon
+$color-violet-lite: lighten($color-bcg-violet, 25%)
+$color-violet-x-lite: lighten($color-violet-lite, 25%)
+$color-text-x-lite: $color-icon
+$color-white: #fff
+
+// classes for colors used in svg
+.stroke-color
+	stroke: lighten($color-grey-text, 42%)
+
+.stroke-color-oposite
+	stroke: $color-violet-icon
+
+.fill-color
+	fill: $color-violet-icon
+
+.fill-color-oposite
+	fill: lighten($color-grey-text, 42%)
