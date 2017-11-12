@@ -70,8 +70,66 @@
 "use strict";
 
 
-console.log('jest bundle, ale czy się zmienia?');
-console.log('tak, zmienia się!');
+var _runLogoAnimation = __webpack_require__(1);
+
+var _runLogoAnimation2 = _interopRequireDefault(_runLogoAnimation);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+$(document).ready(function () {
+    (0, _runLogoAnimation2.default)();
+
+    console.log('jestem w main');
+});
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = runLogoAnimation;
+function runLogoAnimation() {
+
+    // GSAP vars https://greensock.com/docs/#/HTML5/GSAP/TimelineLite/
+    var tl = new TimelineLite();
+
+    var $logoFull = $('#logo-full');
+    var $saw = $('#saw-circle-big');
+    var $storkName = $('#stork-name'); //całość
+    var $stork = $('#stork'); //bocian
+    var $work = $('#work > *');
+    var $wood = $('#wood > *');
+    var $woodW = $('#woodW');
+    var $woodO = $('#woodO');
+    var $woodO2 = $('#woodO2');
+    var $woodD = $('#woodD');
+    var $workW = $('#workW');
+    var $workO = $('#workO');
+    var $workR = $('#workR');
+    var $workK = $('#workK');
+
+    //---------------
+    // RUN LOGO ANIMATION
+    //---------------
+
+    tl.set($wood, { opacity: 0 }).set($work, { opacity: 0 }).from($logoFull, 2, { scale: 0, opacity: 0, transformOrigin: 'center center', rotation: '-720deg', ease: Elastic.easeOut }, 1.5).from($storkName, .5, { y: "-50", opacity: 0, ease: Elastic.easeOut }).addLabel('startWood').call(runWoodText, ['bing1', $woodW], this, 'startWood').call(runWoodText, ['bing2', $woodO], this, 'startWood+=.2').call(runWoodText, ['bing3', $woodO2], this, 'startWood+=.4').call(runWoodText, ['bing4', $woodD], this, 'startWood+=.6').addLabel('startWork', '+=.4').call(runWoodText, ['bang1', $workW], this, 'startWork').call(runWoodText, ['bang2', $workO], this, 'startWork+=.2').call(runWoodText, ['bang3', $workR], this, 'startWork+=.4').call(runWoodText, ['bang4', $workK], this, 'startWork+=.6');
+};
+
+function runWoodText(label, letter) {
+    var tl = new TimelineLite();
+    var $logoFull = $('#logo-full');
+
+    //---------------
+    // RUN ONE LETTER ANIMATION
+    //---------------
+
+    tl.addLabel(label).to($logoFull, 0, { scale: 1.1 }, label).fromTo($logoFull, .25, { scale: 1.1 }, { scale: 1, ease: Bounce.easeOut }).fromTo(letter, .1, { opacity: 0 }, { opacity: 1 }, label);
+};
 
 /***/ })
 /******/ ]);
