@@ -46,7 +46,7 @@ function runWoodText(label, letter){
     //---------------
 
     tl.addLabel(label)
-    .to($logoFull, 0, {scale: 1.1}, label)
-    .fromTo($logoFull, .25, {scale: 1.1}, {scale: 1, ease: Bounce.easeOut})
+    .to($logoFull, 0, {scale: 1.05}, label)
+    .fromTo($logoFull, .25, {scale: 1.05}, {scale: 1, ease: Bounce.easeOut})
     .fromTo(letter, .1, {opacity: 0}, {opacity: 1}, label)
 };

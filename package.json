@@ -23,7 +23,8 @@
   },
   "homepage": "https://github.com/kawa-kw/stork#readme",
   "dependencies": {
-    "babel-preset-es2015": "^6.24.1"
+    "babel-preset-es2015": "^6.24.1",
+    "scrollmagic": "^2.0.5"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
