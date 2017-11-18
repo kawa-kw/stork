@@ -4,7 +4,7 @@
 	<title>{% if page.title %}{{ page.title }} - {% endif %}Stork Wood Work</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Montserrat:100,300,700&amp;subset=latin-ext">
+	<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,900&amp;subset=latin-ext" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet">
 	<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
@@ -14,13 +14,27 @@
 
 <body>
 	<nav class="main-nav">
-		hello navigation
+		<a href="#" class="logo">{% include stork.html %}</a>
+		<ul class="menu">
+			<li><a href="#">O mnie</a></li>
+			<li><a href="#">Projekty</a></li>
+			<li><a href="#">Kontakt</a></li>
+		</ul>
 	</nav>
 
 	{{ content }}
 
 	<footer class="main-footer">
-		hello footer
+		<ul class="social-media">
+			<li class="social-facebook"></li>
+			<li class="social-instgram"></li>
+			<li class="social-pinterest"></li>
+		</ul>
+		<ul class="footer-menu">
+			<li>Kontakt</li>
+			<li>Projekty</li>
+			<li>O mnie</li>
+		</ul>
 	</footer>
 
 	<!-- - - - - - - - - SCRIPTS - - - - - - - - -->

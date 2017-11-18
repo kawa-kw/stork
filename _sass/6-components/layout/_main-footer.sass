@@ -1,0 +1,32 @@
+.main-footer
+	ul
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 20px
+
+		li
+			margin: 0 20px
+
+
+	.social-media
+		background-color: rgba($color-bcg-intro, .4)
+
+		.social-facebook::before
+			+fa-icon($fa-facebook-official, 40px, $color-text)
+
+		.social-instgram::before
+			+fa-icon($fa-instagram, 40px, $color-text)
+
+		.social-pinterest::before
+			+fa-icon($fa-pinterest-square, 40px, $color-text)
+
+	.footer-menu
+		padding: 60px 30px
+		background-color: $color-bcg-intro
+
+		li
+			+font($font-size-menu)
+			color: $color-bcg
+			text-transform: uppercase
+			letter-spacing: 5px

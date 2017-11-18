@@ -2,3 +2,26 @@
 	position: fixed
 	top: 0
 	left: 0
+	display: flex
+	justify-content: space-between
+	height: $height-nav
+	width: 100%
+	padding: $basic-padding
+	background-color: $color-bcg
+	z-index: 9
+
+	.logo svg
+		height: $height-nav * .6
+
+	.menu
+		display: flex
+
+		li
+			margin: 0 10px
+
+		a
+			+font($font-size-menu, 900)
+			color: $color-text
+
+			&::first-letter
+				color: $color-accent

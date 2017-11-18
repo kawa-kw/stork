@@ -6,8 +6,8 @@
 		position: center center
 		size: cover
 		repeat: no-repeat
-		attachment: fixed
 		color: $color-bcg-intro
+	z-index: 10
 
 	&__logo
 		+center
@@ -22,6 +22,10 @@
 
 		svg
 			height: 25vh
+
+	.trigger
+		height: 2px
+		border: 1px solid red
 
 #wood-work *
 	+font(115px, $family: $font-logo)

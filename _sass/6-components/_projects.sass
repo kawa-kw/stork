@@ -1,0 +1,89 @@
+.projects
+	display: grid
+	height: 70vh
+	max-width: 1500px
+	margin: 50px auto
+	grid-template-rows: repeat(6, 1fr)
+	grid-template-columns: repeat(6, 1fr)
+	grid-gap: 15px
+
+	li
+		position: relative
+		overflow: hidden
+		background:
+			color: $color-text
+			size: cover
+			position: center center
+
+		&::before,
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			bottom: 0
+			transition: all .3s ease-in-out
+			opacity: .8
+
+		&::before
+			left: 0
+			right: 50%
+			background-color: $color-accent
+
+		&::after
+			left: 50%
+			right: 0
+			background-color: $color-bcg-intro
+
+		&:hover::before
+			transform: translateX(-100%)
+
+		&:hover::after
+			transform: translateX(100%)
+
+		a
+			+font($font-size-text, 300)
+			position: relative
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 100%
+			height: 100%
+			color: $color-bcg
+			text-transform: uppercase
+			letter-spacing: 10px
+			z-index: 10
+
+		&.square-basic
+			grid-row: span 1
+			grid-column: span 1
+
+		&.square-double
+			grid-row: span 2
+			grid-column: span 2
+
+		&.square-triple
+			grid-row: span 3
+			grid-column: span 3
+
+		&.rect-3x4
+			grid-row: span 3
+			grid-column: span 4
+
+		&.rect-2x3
+			grid-row: span 2
+			grid-column: span 3
+
+// Projects images
+.biurko
+	background-image: url(//unsplash.it/800/800)
+.szafa
+	background-image: url(//unsplash.it/1000/600)
+.stol
+	background-image: url(//unsplash.it/400/600)
+.kredens
+	background-image: url(//unsplash.it/600/400)
+.lawa
+	background-image: url(//unsplash.it/700/1000)
+.polka
+	background-image: url(//unsplash.it/800/600)

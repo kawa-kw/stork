@@ -3,11 +3,14 @@ export default function runScrollTools(){
     // init controller
     const controller = new ScrollMagic.Controller();
 
+    let tween = TweenLite.to(".js-intro-tools .js-tools-container", 5.5, {backgroundColor: "green"});
+
     // create a scene
-    new ScrollMagic.Scene({
-            duration: 100,    // the scene should last for a scroll distance of 100px
-            offset: 50        // start this scene after scrolling for 50px
+    let scene = new ScrollMagic.Scene({
+            duration: 100,
+            offset: 350
         })
-        .setPin("#tools") // pins the element for the the scene's duration
-        .addTo(controller); // assign the scene to the controller
+        .addTo(controller) // assign the scene to the controller
+        .setTween(tween)
+        .setPin(".js-intro-tools .js-tools-container"); // pins the element for the the scene's duration
 };

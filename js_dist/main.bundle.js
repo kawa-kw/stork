@@ -74,15 +74,14 @@ var _runLogoAnimation = __webpack_require__(1);
 
 var _runLogoAnimation2 = _interopRequireDefault(_runLogoAnimation);
 
-var _runScrollTools = __webpack_require__(2);
-
-var _runScrollTools2 = _interopRequireDefault(_runScrollTools);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//import runScrollTools from  './runScrollTools';
+
 
 $(document).ready(function () {
     (0, _runLogoAnimation2.default)();
-    (0, _runScrollTools2.default)();
+    //runScrollTools();
 
     console.log('jestem w main');
 });
@@ -134,30 +133,6 @@ function runWoodText(label, letter) {
     //---------------
 
     tl.addLabel(label).to($logoFull, 0, { scale: 1.05 }, label).fromTo($logoFull, .25, { scale: 1.05 }, { scale: 1, ease: Bounce.easeOut }).fromTo(letter, .1, { opacity: 0 }, { opacity: 1 }, label);
-};
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.default = runScrollTools;
-function runScrollTools() {
-    console.log('jestem w scrollu');
-    // init controller
-    var controller = new ScrollMagic.Controller();
-
-    // create a scene
-    new ScrollMagic.Scene({
-        duration: 100, // the scene should last for a scroll distance of 100px
-        offset: 50 // start this scene after scrolling for 50px
-    }).setPin("#tools") // pins the element for the the scene's duration
-    .addTo(controller); // assign the scene to the controller
 };
 
 /***/ })
